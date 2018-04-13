@@ -70,6 +70,6 @@ for page in range(1,pages):
 columns = {'rank': rank, 'name': gname, 'platform': platform, 'year': year, 'genre': genre, 'publisher': publisher, 'NA_Sales':sales_na, 'EU_Sales': sales_eu,'JP_Sales': sales_jp,'Other_Sales':sales_ot, 'Global_Sales':sales_gl }
 print(rec_count)
 df = pd.DataFrame(columns)
-df = df[['Rank','Name','Platform','Year','Genre','Publisher','NA_Sales','EU_Sales','JP_Sales','Other_Sales','Global_Sales']]
+df = df[['rank','name','platform','year','genre','publisher','NA_Sales','EU_Sales','JP_Sales','Other_Sales','Global_Sales']]
 del df.index.name
-df.to_csv("vgsales.csv",sep=",",encoding='utf-8')
+df.to_csv("vg1sales.csv",sep=",",encoding='utf-8')
