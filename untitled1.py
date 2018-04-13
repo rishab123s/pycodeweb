@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Fri Apr 13 01:13:13 2018
-
 @author: risha
 """
 
@@ -31,7 +30,7 @@ for page in range(1,pages):
 	r = urllib.request.urlopen('http://www.vgchartz.com/gamedb/?page=&results=1000&name=&platform=&minSales=0.01&publisher=&genre=&sort=GL').read()
 	soup = BeautifulSoup(r,"lxml")
 	print(page)
-	chart = soup.find("table", class_="chart")
+	chart = soup.find("div", class_="container-fluid")
 	for row in chart.find_all('tr')[1:]:
 		try: 
 			col = row.find_all('td')
